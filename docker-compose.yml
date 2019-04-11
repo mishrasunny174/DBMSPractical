@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  db:
+    image: mariadb
+    restart: on-failure
+    container_name: "DBMS_practicals_db"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+  adminer:
+    image: adminer
+    restart: on-failure
+    container_name: "DBMS_practicals-adminer"
+    ports:
+      - 80:8080
+    depends_on: 
+      - db
