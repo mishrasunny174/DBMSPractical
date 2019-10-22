@@ -1,4 +1,4 @@
-# Practical queries
+# Practical queries according to syllabus
 
 1. ```select eno as 'employee no', ename as 'employee name',job_type as 'job', hire_date as 'Hire Date' from employee;```
 
